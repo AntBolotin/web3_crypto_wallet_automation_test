@@ -1,5 +1,5 @@
 # superdao_test
-CodeceptJS/Pupeteer Automation Test
+CodeceptJS/Puppeteer Automation Test
 
 
 1. Download/clone
