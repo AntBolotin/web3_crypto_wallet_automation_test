@@ -2,7 +2,7 @@ Feature('Metamask');
 
 Scenario('import wallet test', ({ I }) => {
     I.amOnPage('https://www.google.com/')
-    I.wait(20)
+    I.wait(20)  // waiting for autorun metamask
     I.switchToNextTab();
     I.see('Добро пожаловать в MetaMask', '.welcome-page__header')
     I.click('Начало работы')
@@ -43,7 +43,8 @@ Scenario('add network test', ({ I }) => {
     I.click('//button[text()="Все выполнено"]')
     I.see('ETH')
 
-    I.waitForClickable('//button[@data-testid="popover-close"]', 5)
+    I.wait(2)
+    I.waitForClickable('//button[@data-testid="popover-close"]', 10)
     I.click('//button[@data-testid="popover-close"]')
     I.click('//div[contains(@class, "network-display--clickable")]')
     I.waitForClickable('//button[text()="Добавить сеть"]', 5)
